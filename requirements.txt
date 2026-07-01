@@ -1,0 +1,7 @@
+flask==3.0.3
+gunicorn==22.0.0
+tensorflow==2.16.1
+keras==3.3.3
+numpy==1.26.4
+pillow==10.4.0
+h5py==3.11.0
