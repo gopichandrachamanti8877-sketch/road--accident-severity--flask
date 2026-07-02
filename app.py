@@ -1,4 +1,5 @@
 import os
+import time
 import numpy as np
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
@@ -35,6 +36,7 @@ def index():
 
 @app.route("/predict", methods=["POST"])
 def predict():
+    start_time = time.time()
     if "image" not in request.files:
         return jsonify({"error": "No image file uploaded."}), 400
     file = request.files["image"]
@@ -42,18 +44,22 @@ def predict():
         return jsonify({"error": "No selected file."}), 400
     if not allowed_file(file.filename):
         return jsonify({"error": "Please upload JPG, JPEG, PNG, or WEBP."}), 400
-
     filename = secure_filename(file.filename)
     filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
     file.save(filepath)
     try:
-        arr = preprocess_image(filepath)
-        probs = load_model_once().predict(arr, verbose=0)[0]
+        probs = load_model_once().predict(preprocess_image(filepath), verbose=0)[0]
         pred_idx = int(np.argmax(probs))
+        sorted_probs = sorted(
+            [{"class_name": CLASS_NAMES[i], "probability": round(float(probs[i]) * 100, 2)} for i in range(len(CLASS_NAMES))],
+            key=lambda x: x["probability"],
+            reverse=True
+        )
         return jsonify({
             "prediction": CLASS_NAMES[pred_idx],
             "confidence": round(float(np.max(probs)) * 100, 2),
-            "probabilities": {CLASS_NAMES[i]: round(float(probs[i]) * 100, 2) for i in range(len(CLASS_NAMES))}
+            "prediction_time": round(time.time() - start_time, 3),
+            "probabilities": sorted_probs
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
