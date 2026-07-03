@@ -145,7 +145,126 @@
     </p>
 
 </section>
+          
+<section class="card">
 
+<h2>📂 Dataset Information</h2>
+
+<p>
+This project uses a publicly available Road Accident Image Dataset containing
+road accident images collected from real traffic scenarios. The dataset was
+prepared for supervised image classification by organizing accident images
+into three severity categories.
+</p>
+
+<table class="dataset-table">
+
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Dataset Type</td>
+<td>Image Dataset</td>
+</tr>
+
+<tr>
+<td>Input Image Size</td>
+<td>224 × 224 pixels</td>
+</tr>
+
+<tr>
+<td>Number of Classes</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>Class Labels</td>
+<td>Minor Impact, Substantial Impact, Critical Impact</td>
+</tr>
+
+<tr>
+<td>Preprocessing</td>
+<td>Image resizing, normalization and augmentation</td>
+</tr>
+
+<tr>
+<td>Framework</td>
+<td>TensorFlow / Keras</td>
+</tr>
+
+</table>
+
+</section>
+  <section class="card">
+
+<h2>🧠 Deep Learning Models</h2>
+
+<p>
+Three convolutional neural network architectures were implemented and evaluated
+during this research to identify the best-performing model for road accident
+severity classification.
+</p>
+
+<div class="model-grid">
+
+<div class="model-card">
+<h3>Custom CNN</h3>
+<p>
+A baseline convolutional neural network developed from scratch for comparison.
+</p>
+</div>
+
+<div class="model-card">
+<h3>MobileNetV2</h3>
+<p>
+A lightweight transfer learning model optimized for efficient image
+classification.
+</p>
+</div>
+
+<div class="model-card">
+<h3>EfficientNetB0</h3>
+<p>
+A modern transfer learning architecture providing improved feature extraction
+and classification performance.
+</p>
+</div>
+
+</div>
+
+</section>   
+     <section class="card">
+
+<h2>📊 Performance Metrics</h2>
+
+<p>
+The trained models were evaluated using several machine learning performance
+metrics to measure classification effectiveness.
+</p>
+
+<ul>
+
+<li>Accuracy</li>
+
+<li>Precision</li>
+
+<li>Recall</li>
+
+<li>F1 Score</li>
+
+<li>Confusion Matrix</li>
+
+<li>Classification Report</li>
+
+<li>Training Loss</li>
+
+<li>Validation Loss</li>
+
+</ul>
+
+</section>     
     <section class="predictor">
       <div class="upload-card">
         <h2>Upload Accident Image</h2>
