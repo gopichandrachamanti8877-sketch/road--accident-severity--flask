@@ -12,9 +12,17 @@
       <div class="hero-text">
         <p class="tag">CNN-Based Image Classification</p>
         <h1>Road Accident Severity Classifier</h1>
-        <p class="subtitle">Upload a CCTV road accident image and classify the severity as Minor Impact, Substantial Impact, or Critical Impact.</p>
-        <div class="badges"><span>Custom CNN</span><span>MobileNetV2</span><span>EfficientNetB0</span></div>
+        <p class="subtitle">
+          Upload a CCTV road accident image and classify the severity as
+          Minor Impact, Substantial Impact, or Critical Impact.
+        </p>
+        <div class="badges">
+          <span>Custom CNN</span>
+          <span>MobileNetV2</span>
+          <span>EfficientNetB0</span>
+        </div>
       </div>
+
       <div class="hero-card">
         <h2>AI Prediction Interface</h2>
         <p>Model: <strong>best_accident_severity_model.keras</strong></p>
@@ -22,285 +30,175 @@
         <p>Classes: <strong>3 severity levels</strong></p>
       </div>
     </section>
+
     <section class="card">
-    <h2>📘 Project Overview</h2>
+      <h2>📘 Project Overview</h2>
+      <p>
+        This project presents an AI-powered road accident severity classification
+        system using Convolutional Neural Networks. The system classifies accident
+        images into Minor Impact, Substantial Impact, and Critical Impact.
+      </p>
+    </section>
 
-    <p>
-        Road traffic accidents are among the leading causes of fatalities worldwide.
-        Early identification of accident severity enables emergency services to
-        prioritize response, reduce rescue time, and improve patient survival rates.
-    </p>
-
-    <p>
-        This project presents an AI-powered Road Accident Severity Classification
-        system using Convolutional Neural Networks (CNN). The system automatically
-        classifies accident images into three severity levels:
-    </p>
-
-    <ul>
-        <li>Minor Impact</li>
-        <li>Substantial Impact</li>
-        <li>Critical Impact</li>
-    </ul>
-</section>
     <section class="card">
+      <h2>🔬 Research Problem</h2>
+      <p>
+        Manual accident severity assessment can be slow, inconsistent, and dependent
+        on human judgement. This project investigates whether CNN-based image
+        classification can support faster initial accident severity screening.
+      </p>
+    </section>
 
-    <h2>🔬 Research Problem</h2>
-
-    <p>
-        Road traffic accidents are one of the leading causes of injuries and fatalities worldwide.
-        Determining the severity of an accident quickly is critical for emergency response and
-        resource allocation.
-    </p>
-
-    <p>
-        Traditional assessment methods rely on eyewitness reports or manual inspection,
-        which may be slow, inconsistent, and prone to human error. This can delay emergency
-        medical assistance and increase the risk of severe consequences.
-    </p>
-
-    <p>
-        This project investigates the use of Convolutional Neural Networks (CNNs) to
-        automatically classify road accident images into three severity levels:
-    </p>
-
-    <ul>
-        <li><strong>Minor Impact</strong></li>
-        <li><strong>Substantial Impact</strong></li>
-        <li><strong>Critical Impact</strong></li>
-    </ul>
-
-    <p>
-        By automating the severity classification process, the proposed system aims to
-        support faster emergency decision-making, improve response efficiency, and
-        demonstrate the practical application of deep learning in intelligent transportation systems.
-    </p>
-
-</section>
     <section class="card">
-
-    <h2>🎯 Research Objectives</h2>
-
-    <p>
-        The primary objective of this research is to develop an intelligent web-based
-        system capable of automatically classifying the severity of road accidents
-        from images using deep learning techniques.
-    </p>
-
-    <ul>
+      <h2>🎯 Research Objectives</h2>
+      <ul>
         <li>Develop a CNN-based road accident severity classification model.</li>
+        <li>Compare Custom CNN, MobileNetV2, and EfficientNetB0.</li>
+        <li>Evaluate performance using accuracy, precision, recall, and F1-score.</li>
+        <li>Select the best-performing model for deployment.</li>
+        <li>Deploy the trained model as a Flask web application.</li>
+        <li>Provide prediction confidence and class probabilities.</li>
+      </ul>
+    </section>
 
-        <li>Compare the performance of Custom CNN, MobileNetV2, and EfficientNetB0 models.</li>
-
-        <li>Improve accident severity prediction accuracy using transfer learning.</li>
-
-        <li>Deploy the trained model as a user-friendly Flask web application.</li>
-
-        <li>Provide real-time prediction results with confidence scores for
-          <section class="card">
-
-    <h2>⚙️ Research Workflow</h2>
-
-    <p>
-        The proposed system follows a structured machine learning workflow from data
-        collection to deployment. Each stage contributes to building an accurate and
-        reliable road accident severity classification system.
-    </p>
-
-    <div class="workflow">
-
-        <div>📂 Dataset Collection</div>
+    <section class="card">
+      <h2>⚙️ Research Workflow</h2>
+      <div class="workflow">
+        <div>📂 Dataset</div>
         <span>→</span>
-
-        <div>🖼️ Image Preprocessing</div>
+        <div>🖼️ Preprocessing</div>
         <span>→</span>
-
-        <div>🧠 CNN Model Training</div>
+        <div>🧠 Model Training</div>
         <span>→</span>
-
-        <div>📊 Model Evaluation</div>
+        <div>📊 Evaluation</div>
         <span>→</span>
+        <div>🌐 Deployment</div>
+      </div>
+      <p>
+        The workflow includes dataset preparation, image preprocessing, CNN model
+        training, model evaluation, model saving, and Flask-based web deployment.
+      </p>
+    </section>
 
-        <div>💾 Model Saving</div>
-        <span>→</span>
+    <section class="card">
+      <h2>📂 Dataset Information</h2>
+      <table class="dataset-table">
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Dataset Type</td>
+          <td>Road accident CCTV image dataset</td>
+        </tr>
+        <tr>
+          <td>Input Image Size</td>
+          <td>224 × 224 pixels</td>
+        </tr>
+        <tr>
+          <td>Number of Classes</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Class Labels</td>
+          <td>Minor Impact, Substantial Impact, Critical Impact</td>
+        </tr>
+        <tr>
+          <td>Preprocessing</td>
+          <td>Image resizing, normalization, and augmentation</td>
+        </tr>
+        <tr>
+          <td>Framework</td>
+          <td>TensorFlow / Keras</td>
+        </tr>
+      </table>
+    </section>
 
-        <div>🌐 Flask Web Deployment</div>
-        <span>→</span>
+    <section class="card">
+      <h2>🧠 Deep Learning Models</h2>
+      <div class="model-grid">
+        <div class="model-card">
+          <h3>Custom CNN</h3>
+          <p>Baseline CNN model trained from scratch on the accident dataset.</p>
+        </div>
+        <div class="model-card">
+          <h3>MobileNetV2</h3>
+          <p>Transfer learning model selected as the best-performing model.</p>
+        </div>
+        <div class="model-card">
+          <h3>EfficientNetB0</h3>
+          <p>Transfer learning model tested for accuracy and efficiency comparison.</p>
+        </div>
+      </div>
+    </section>
 
-        <div>🚗 Image Upload</div>
-        <span>→</span>
+    <section class="card">
+      <h2>📊 Performance Metrics</h2>
+      <ul>
+        <li>Accuracy</li>
+        <li>Precision</li>
+        <li>Recall</li>
+        <li>F1-score</li>
+        <li>Confusion matrix</li>
+        <li>Classification report</li>
+        <li>Training and validation curves</li>
+      </ul>
+    </section>
 
-        <div>⚡ Severity Prediction</div>
-
-    </div>
-
-    <p>
-        The workflow begins with collecting and preprocessing road accident images,
-        followed by training multiple deep learning models including a Custom CNN,
-        MobileNetV2, and EfficientNetB0. The trained models are evaluated using
-        accuracy, precision, recall, F1-score, confusion matrix, and classification
-        reports. Finally, the best-performing model is deployed as a Flask-based web
-        application, enabling users to upload accident images and receive real-time
-        severity predictions with confidence scores.
-    </p>
-
-</section>
-          
-<section class="card">
-
-<h2>📂 Dataset Information</h2>
-
-<p>
-This project uses a publicly available Road Accident Image Dataset containing
-road accident images collected from real traffic scenarios. The dataset was
-prepared for supervised image classification by organizing accident images
-into three severity categories.
-</p>
-
-<table class="dataset-table">
-
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-
-<tr>
-<td>Dataset Type</td>
-<td>Image Dataset</td>
-</tr>
-
-<tr>
-<td>Input Image Size</td>
-<td>224 × 224 pixels</td>
-</tr>
-
-<tr>
-<td>Number of Classes</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>Class Labels</td>
-<td>Minor Impact, Substantial Impact, Critical Impact</td>
-</tr>
-
-<tr>
-<td>Preprocessing</td>
-<td>Image resizing, normalization and augmentation</td>
-</tr>
-
-<tr>
-<td>Framework</td>
-<td>TensorFlow / Keras</td>
-</tr>
-
-</table>
-
-</section>
-  <section class="card">
-
-<h2>🧠 Deep Learning Models</h2>
-
-<p>
-Three convolutional neural network architectures were implemented and evaluated
-during this research to identify the best-performing model for road accident
-severity classification.
-</p>
-
-<div class="model-grid">
-
-<div class="model-card">
-<h3>Custom CNN</h3>
-<p>
-A baseline convolutional neural network developed from scratch for comparison.
-</p>
-</div>
-
-<div class="model-card">
-<h3>MobileNetV2</h3>
-<p>
-A lightweight transfer learning model optimized for efficient image
-classification.
-</p>
-</div>
-
-<div class="model-card">
-<h3>EfficientNetB0</h3>
-<p>
-A modern transfer learning architecture providing improved feature extraction
-and classification performance.
-</p>
-</div>
-
-</div>
-
-</section>   
-     <section class="card">
-
-<h2>📊 Performance Metrics</h2>
-
-<p>
-The trained models were evaluated using several machine learning performance
-metrics to measure classification effectiveness.
-</p>
-
-<ul>
-
-<li>Accuracy</li>
-
-<li>Precision</li>
-
-<li>Recall</li>
-
-<li>F1 Score</li>
-
-<li>Confusion Matrix</li>
-
-<li>Classification Report</li>
-
-<li>Training Loss</li>
-
-<li>Validation Loss</li>
-
-</ul>
-
-</section>     
     <section class="predictor">
       <div class="upload-card">
         <h2>Upload Accident Image</h2>
         <p class="muted">Supported formats: JPG, JPEG, PNG, WEBP</p>
+
         <label class="drop-area" for="imageInput">
           <input id="imageInput" type="file" accept="image/*">
           <span class="upload-icon">📤</span>
           <span>Choose an image</span>
         </label>
-        <div id="previewWrapper" class="preview hidden"><img id="previewImage" alt="Uploaded preview"></div>
-        <button id="predictBtn" class="predict-btn" disabled>Predict Severity</button>
+
+        <div id="previewWrapper" class="preview hidden">
+          <img id="previewImage" alt="Uploaded preview">
+        </div>
+
+        <button id="predictBtn" class="predict-btn" disabled>
+          Predict Severity
+        </button>
       </div>
 
       <div class="result-card">
         <h2>Prediction Result</h2>
-        <div id="emptyState" class="empty-state">Upload an accident image to view the severity prediction.</div>
-        <div id="loadingState" class="loading hidden"><div class="spinner"></div><p>Analyzing image...</p></div>
+
+        <div id="emptyState" class="empty-state">
+          Upload an accident image to view the severity prediction.
+        </div>
+
+        <div id="loadingState" class="loading hidden">
+          <div class="spinner"></div>
+          <p>Analyzing image...</p>
+        </div>
+
         <div id="resultState" class="hidden">
           <div id="severityBadge" class="severity-badge">Prediction</div>
           <h3 id="predictionText"></h3>
           <p id="confidenceText" class="confidence-text"></p>
-          <div class="confidence-bar"><div id="confidenceFill"></div></div>
+
+          <div class="confidence-bar">
+            <div id="confidenceFill"></div>
+          </div>
+
           <h4>Class Probabilities</h4>
           <div id="probabilities"></div>
         </div>
+
         <div id="errorState" class="error hidden"></div>
       </div>
     </section>
-
-    <section class="info-grid">
-      <article><h3>Project Purpose</h3><p>Supports initial accident severity screening from CCTV images.</p></article>
-      <article><h3>Research Workflow</h3><p>Connects preprocessing, training, evaluation, model saving, and deployment.</p></article>
-      <article><h3>Important Note</h3><p>This is an academic prototype and should not replace human safety decisions.</p></article>
-    </section>
   </main>
-  <footer><p>Machine Learning and Smart Systems Project | Gopichand Rachamanti</p></footer>
+
+  <footer>
+    <p>Machine Learning and Smart Systems Project | Gopichand Rachamanti</p>
+  </footer>
+
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
